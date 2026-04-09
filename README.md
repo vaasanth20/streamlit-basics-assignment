@@ -1,4 +1,6 @@
-# Streamlit Sales App \n This app allows managers to filter and visualize product sales by category.
+# Streamlit Sales App 
+
+**This app allows managers to filter and visualize product sales by category.**
 
 You are a data analyst who wants to share a simple sales summary with your non-technical manager. Instead of sending a static CSV, you decide to build a small interactive Streamlit app that displays a hardcoded dataset and lets the manager filter it by category using a dropdown.
 
@@ -10,6 +12,8 @@ Create a Python file called sales_app.py that does the following:
 - Creates a small hardcoded pandas DataFrame with at least 5 rows and 3 columns: Product, Category, and Sales
 - Adds a selectbox that lets the user filter the table by Category
 - Displays the filtered DataFrame using st.dataframe()
+
+**Code :**
 
 ```python3
 
@@ -35,6 +39,8 @@ df = pd.DataFrame(data)
 
 Move the selectbox filter into a sidebar using st.sidebar. The main content area should only show the filtered table and a line chart of Sales values for the selected category using st.line_chart().
 
+**Code :**
+
 ```python3
 
 # --- Task 2: Sidebar Filter ---
@@ -58,3 +64,17 @@ st.write("### Sales Trend")
 st.line_chart(filtered_df.set_index("Product")["Sales"])
 
 ```
+
+**Output :**
+
+All Categories :
+
+<img width="897" height="1001" alt="image" src="https://github.com/user-attachments/assets/b080419c-506b-4d49-a41c-a23006541e27" />
+
+Category : Electronics
+
+<img width="803" height="813" alt="image" src="https://github.com/user-attachments/assets/32e9ac05-c1fc-4174-859e-ad7e7efc4366" />
+
+Category : 
+
+<img width="804" height="748" alt="image" src="https://github.com/user-attachments/assets/7774ba03-05c0-4788-8321-de33af997e51" />
